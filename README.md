@@ -562,6 +562,161 @@
             animation: pulse 2s infinite;
         }
 
+        /* Login Page Styles */
+        .login-page {
+            display: none;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 100px 0 50px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-page.active {
+            display: block;
+        }
+
+        .login-container {
+            max-width: 450px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            animation: slideInUp 0.8s ease-out;
+            position: relative;
+            z-index: 2;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .login-header h2 {
+            font-size: 2.5rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .login-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .login-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .login-button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.2rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .login-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .forgot-password a {
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+            color: #764ba2;
+        }
+
+        .signup-link {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .signup-link p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .signup-link button {
+            background: transparent;
+            color: #667eea;
+            border: 2px solid #667eea;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .signup-link button:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Login page floating shapes */
+        .login-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .login-shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .login-shape:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            left: 20%;
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .login-shape:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            right: 20%;
+            top: 60%;
+            animation-delay: 3s;
+        }
+
+        .login-shape:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            left: 70%;
+            top: 30%;
+            animation-delay: 6s;
+        }
+
         /* Success Message */
         .success-message {
             display: none;
@@ -635,6 +790,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" onclick="showLoginPage()">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -756,6 +912,62 @@
         </section>
     </div>
 
+    <!-- Login Page -->
+    <div id="login-page" class="login-page">
+        <div class="login-shapes">
+            <div class="login-shape"></div>
+            <div class="login-shape"></div>
+            <div class="login-shape"></div>
+        </div>
+        <div class="container">
+            <div class="login-container">
+                <button class="back-button" onclick="showMainPage()">← Back to Home</button>
+                
+                <div class="login-header">
+                    <h2>Welcome Back!</h2>
+                    <p>Sign in to your Costico AI dashboard</p>
+                </div>
+
+                <form class="login-form" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address *</label>
+                        <input type="email" id="loginEmail" name="loginEmail" required 
+                               placeholder="Enter your email address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password *</label>
+                        <input type="password" id="loginPassword" name="loginPassword" required 
+                               placeholder="Enter your password">
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <label for="rememberMe">Remember me for 30 days</label>
+                    </div>
+
+                    <button type="submit" class="login-button">Sign In</button>
+                </form>
+
+                <div class="forgot-password">
+                    <a href="#" onclick="alert('Password reset link sent to your email!')">Forgot your password?</a>
+                </div>
+
+                <div class="signup-link">
+                    <p>Don't have an account yet?</p>
+                    <button onclick="showSignupPage()">Start Free Trial</button>
+                </div>
+
+                <div id="login-success-message" class="success-message">
+                    <div class="success-icon">🚀</div>
+                    <h3>Login Successful!</h3>
+                    <p>Welcome back to Costico AI!<br>
+                    Redirecting to your dashboard...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Signup Page -->
     <div id="signup-page" class="signup-page">
         <div class="container">
@@ -874,8 +1086,15 @@
             });
         });
 
-        document.querySelector('.trial-button').addEventListener('click', function() {
-            showSignupPage();
+        // Wait for DOM to be fully loaded before adding event listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            const trialButton = document.querySelector('.trial-button');
+            if (trialButton) {
+                trialButton.addEventListener('click', function() {
+                    // Redirect to Apify console signup
+                    window.open('https://console.apify.com/sign-up', '_blank');
+                });
+            }
         });
 
         // Show signup page
@@ -888,7 +1107,52 @@
         // Show main page
         function showMainPage() {
             document.getElementById('signup-page').classList.remove('active');
+            document.getElementById('login-page').classList.remove('active');
             document.body.style.overflow = 'auto';
+        }
+
+        // Show login page
+        function showLoginPage() {
+            document.getElementById('login-page').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            window.scrollTo(0, 0);
+        }
+
+        // Handle login form submission
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const email = formData.get('loginEmail');
+            const password = formData.get('loginPassword');
+            
+            // Basic validation
+            if (!email || !password) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Simple email format validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Hide form and show success message
+            event.target.style.display = 'none';
+            document.getElementById('login-success-message').classList.add('show');
+            
+            // Auto redirect after 3 seconds
+            setTimeout(() => {
+                alert('Redirecting to Costico AI Dashboard...\n\nDemo: In a real application, you would be redirected to the main dashboard with your cost optimization data.');
+                showMainPage();
+                // Reset form
+                event.target.reset();
+                event.target.style.display = 'grid';
+                document.getElementById('login-success-message').classList.remove('show');
+            }, 3000);
         }
 
         // Handle signup form submission
