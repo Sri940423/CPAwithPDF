@@ -1,13 +1,10 @@
 <!DOCTYPE html5>
 <html lang="en">
-<head>
+<<script>(function(w,d,s,u){let j=d.createElement(s);j.async=true;j.src="https://assets.channelboost.com/scripts/cts.js?uid=" + u;let f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f);})(window,document,"script","139c1320-164e-42c4-9769-9e21765192c6");</script>>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Costico AI - Intelligent Cost Optimization</title>
-    
-    <!-- ChannelBoost Tracking Script -->
-    <script>(function(w,d,s,u){let j=d.createElement(s);j.async=true;j.src="https://assets.channelboost.com/scripts/cts.js?uid=" + u;let f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f);})(window,document,"script","139c1320-164e-42c4-9769-9e21765192c6");</script>
-    
+
     <style>
         * {
             margin: 0;
