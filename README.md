@@ -1,4 +1,4 @@
-<!DOCTYPE html9>
+<!DOCTYPE html10>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -876,7 +876,7 @@
                         <li>✓ Up to 3 integrations</li>
                         <li>✓ Standard dashboard</li>
                     </ul>
-                    <button class="subscribe-btn">Subscribe Now</button>
+                    <button class="subscribe-btn" onclick="trackify.trackEvent('29')">Subscribe Now</button>
                 </div>
                 
                 <div class="pricing-card">
@@ -890,7 +890,7 @@
                         <li>✓ Custom dashboards</li>
                         <li>✓ Predictive analytics</li>
                     </ul>
-                    <button class="subscribe-btn">Subscribe Now</button>
+                    <button class="subscribe-btn" onclick="trackify.trackEvent('149')">Subscribe Now</button>
                 </div>
                 
                 <div class="pricing-card">
@@ -905,7 +905,7 @@
                         <li>✓ Custom integrations</li>
                         <li>✓ Advanced reporting</li>
                     </ul>
-                    <button class="subscribe-btn">Subscribe Now</button>
+                    <button class="subscribe-btn" onclick="trackify.trackEvent('499')">Subscribe Now</button>
                 </div>
             </div>
         </section>
@@ -919,7 +919,7 @@
                     No credit card required, no hidden fees, and full access to all premium features. 
                     See how much you can save in just two weeks!
                 </p>
-                <a class="trial-button" href="https://console.apify.com/sign-up" target="_blank">Start 14-Day Free Trial</a>
+                <a class="trial-button" href="https://console.apify.com/sign-up" target="_blank" onclick="trackify.trackEvent('14 day free trial')">Start 14-Day Free Trial</a>
             </div>
         </section>
     </div>
