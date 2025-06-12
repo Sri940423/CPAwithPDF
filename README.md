@@ -1,4 +1,4 @@
-<!DOCTYPE html8>
+<!DOCTYPE html9>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -919,7 +919,7 @@
                     No credit card required, no hidden fees, and full access to all premium features. 
                     See how much you can save in just two weeks!
                 </p>
-                <button class="trial-button">Start 14-Day Free Trial</button>
+                <a class="trial-button" href="https://console.apify.com/sign-up" target="_blank">Start 14-Day Free Trial</a>
             </div>
         </section>
     </div>
