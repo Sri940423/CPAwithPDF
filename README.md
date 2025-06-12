@@ -1,10 +1,21 @@
-<!DOCTYPE html7>
+<!DOCTYPE html8>
 <html lang="en">
-<<script>(function(w,d,s,u){let j=d.createElement(s);j.async=true;j.src="https://assets.channelboost.com/scripts/cts.js?uid=" + u;let f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f);})(window,document,"script","139c1320-164e-42c4-9769-9e21765192c6");</script>>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Costico AI - Intelligent Cost Optimization</title>
-
+    
+    <!-- 📊 ChannelBoost Tracking Snippet -->
+    <script>
+       (function(w,d,s,u){ 
+        let j=d.createElement(s);
+        j.async=true;
+        j.src="https://assets.channelboost.com/scripts/cts.js?uid=" + u;
+        let f=d.getElementsByTagName(s)[0];
+        f.parentNode.insertBefore(j,f);
+       })(window,document,"script","139c1320-164e-42c4-9769-9e21765192c6");
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -779,7 +790,7 @@
             .nav-links { display: none; }
         }
     </style>
-<<script>(function(w,d,s,u){let j=d.createElement(s);j.async=true;j.src="https://assets.channelboost.com/scripts/cts.js?uid=" + u;let f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f);})(window,document,"script","139c1320-164e-42c4-9769-9e21765192c6");</script>>
+</head>
 <body>
     <!-- Navigation -->
     <nav>
@@ -908,7 +919,7 @@
                     No credit card required, no hidden fees, and full access to all premium features. 
                     See how much you can save in just two weeks!
                 </p>
-                <a href="https://console.apify.com/sign-up" class="trial-button">Start 14-Day Free Trial</a>
+                <button class="trial-button">Start 14-Day Free Trial</button>
             </div>
         </section>
     </div>
@@ -930,4 +941,6 @@
                 </div>
 
                 <form class="login-form" onsubmit="handleLogin(event)">
-                    <div class
+                    <div class="form-group">
+                        <label for="loginEmail">Email Address *</label>
+                        <input type="email" id="loginEmail"
