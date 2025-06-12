@@ -1,4 +1,4 @@
-<!DOCTYPE html5>
+<!DOCTYPE html6>
 <html lang="en">
 <<script>(function(w,d,s,u){let j=d.createElement(s);j.async=true;j.src="https://assets.channelboost.com/scripts/cts.js?uid=" + u;let f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f);})(window,document,"script","139c1320-164e-42c4-9769-9e21765192c6");</script>>
     <meta charset="UTF-8">
